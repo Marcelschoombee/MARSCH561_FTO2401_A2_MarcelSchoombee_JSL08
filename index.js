@@ -13,9 +13,9 @@ class bankBranch {
     }
 
 
-get branchInfo() {
+getBranchInfo() {
     return this.branchInfo;
-}
+    }
 }
 const branchA = new bankBranch("Somewhere Branch")
 const branchB = new bankBranch("Nowhere Branch")
