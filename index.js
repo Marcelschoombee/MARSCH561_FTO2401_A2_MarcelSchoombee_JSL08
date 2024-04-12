@@ -1,9 +1,17 @@
 // This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
+let bankBranchInstance = null;
+
 // 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
 
 // 2. Define a class called `BankBranch` for managing branch information.
-
+class BankBranch {
+    constuctor(branchInfo) {
+        if (!bankBranchIntance) {
+            
+        }
+    }
+}
 // 3. In the `BankBranch` class:
 //    - Create a constructor that takes `branchInfo` as a parameter.
 //    - Inside the constructor, check if the `bankBranchInstance` variable is null (indicating no instance exists).
