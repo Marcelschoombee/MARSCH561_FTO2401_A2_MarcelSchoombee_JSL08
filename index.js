@@ -8,7 +8,7 @@ let bankBranchInstance = null;
 class BankBranch {
     constuctor(branchInfo) {
         if (!bankBranchIntance) {
-            
+            this.bankInfo = branchInfo;
         }
     }
 }
