@@ -9,7 +9,9 @@ class BankBranch {
     constuctor(branchInfo) {
         if (!bankBranchIntance) {
             this.bankInfo = branchInfo;
+            bankBranchInstance = this;
         }
+        return bankBranchInstance;
     }
 }
 // 3. In the `BankBranch` class:
