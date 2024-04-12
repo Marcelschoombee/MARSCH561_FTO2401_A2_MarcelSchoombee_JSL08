@@ -4,7 +4,7 @@ let bankBranchInstance = null;
 
 
 class bankBranch {
-    constuctor(branchInfo) {
+    constructor(branchInfo) {
         if (!bankBranchInstance) {
             this.bankInfo = branchInfo;
             bankBranchInstance = this;
@@ -14,11 +14,13 @@ class bankBranch {
 
 
 getBranchInfo() {
-    return this.branchInfo;
+    return this.bankInfo;
     }
 }
 const branchA = new bankBranch("Somewhere Branch")
+console.log(branchA.getBranchInfo());
 const branchB = new bankBranch("Nowhere Branch")
+console.log(branchB.getBranchInfo());
 
 console.log(branchA === branchB)
 
