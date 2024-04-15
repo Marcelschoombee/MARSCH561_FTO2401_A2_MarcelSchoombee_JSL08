@@ -1,28 +1,30 @@
 // This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
-let bankBranchInstance = null;
+let bankBranchInstance = null; // This declares a variable. This variable will hold the 'bankBranch' class
 
 
-class bankBranch {
-    constructor(branchInfo) {
-        if (!bankBranchInstance) {
-            this.bankInfo = branchInfo;
-            bankBranchInstance = this;
+class bankBranch {                          // this defines a class 'bankbranch'
+    constructor(branchInfo) {               // this is a constructor method of the 'bankBranch',  
+        if (!bankBranchInstance) {          // this checks if bankBranchInstance is null
+            this.bankInfo = branchInfo;     // if it is, it means no instance of 'bankBranch exists, and it creates one
+            bankBranchInstance = this;      // This line assigns the current instance 'this' to the 'bankBranchInstance',
+                                            // making it the singleton instance.
         }
-        return bankBranchInstance;
+        return bankBranchInstance;          // returns the singlton instance    
     }
 
 
-getBranchInfo() {
+getBranchInfo() {                           // methos of the 'bankBranch' class, returns 'bankInfo'
     return this.bankInfo;
     }
 }
-const branchA = new bankBranch("Somewhere Branch")
+const branchA = new bankBranch("Somewhere Branch")  // creates a new instance of the bankBranch class
 console.log(branchA.getBranchInfo());
 const branchB = new bankBranch("Nowhere Branch")
 console.log(branchB.getBranchInfo());
 
-console.log(branchA === branchB)
+console.log(branchA === branchB)  // Only one instance of the bankBranch class can exists
+
 
 
 
